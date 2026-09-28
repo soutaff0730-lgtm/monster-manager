@@ -1,0 +1,913 @@
+/* ================================= */
+
+/* 全体 */
+
+/* ================================= */
+
+body {
+
+    font-family:
+
+        Arial,
+
+        "Noto Sans JP",
+
+        sans-serif;
+
+    max-width:
+
+        1100px;
+
+    margin:
+
+        0 auto;
+
+    padding:
+
+        20px;
+
+    background:
+
+        #f5f5f5;
+
+    color:
+
+        #222;
+
+}
+
+/* ================================= */
+
+/* 見出し */
+
+/* ================================= */
+
+h1 {
+
+    text-align:
+
+        center;
+
+    margin-bottom:
+
+        30px;
+
+}
+
+h2 {
+
+    border-left:
+
+        5px solid #333;
+
+    padding-left:
+
+        10px;
+
+}
+
+/* ================================= */
+
+/* セクション */
+
+/* ================================= */
+
+section {
+
+    background:
+
+        white;
+
+    padding:
+
+        20px;
+
+    margin-bottom:
+
+        20px;
+
+    border-radius:
+
+        10px;
+
+    box-shadow:
+
+        0 2px 5px
+
+        rgba(0, 0, 0, 0.1);
+
+}
+
+/* ================================= */
+
+/* 入力欄 */
+
+/* ================================= */
+
+input,
+
+select {
+
+    padding:
+
+        9px;
+
+    margin:
+
+        5px;
+
+    border:
+
+        1px solid #ccc;
+
+    border-radius:
+
+        5px;
+
+    font-size:
+
+        14px;
+
+}
+
+/* ================================= */
+
+/* ボタン */
+
+/* ================================= */
+
+button {
+
+    padding:
+
+        8px 12px;
+
+    margin:
+
+        5px;
+
+    border:
+
+        none;
+
+    border-radius:
+
+        5px;
+
+    cursor:
+
+        pointer;
+
+    background:
+
+        #333;
+
+    color:
+
+        white;
+
+}
+
+button:hover {
+
+    opacity:
+
+        0.8;
+
+}
+
+/* ================================= */
+
+/* アカウントタブ */
+
+/* ================================= */
+
+#accountTabs {
+
+    display:
+
+        flex;
+
+    flex-wrap:
+
+        wrap;
+
+    gap:
+
+        5px;
+
+}
+
+.account-tab {
+
+    margin:
+
+        0;
+
+    padding:
+
+        10px 18px;
+
+    background:
+
+        #ddd;
+
+    color:
+
+        #222;
+
+}
+
+.account-tab.active {
+
+    background:
+
+        #333;
+
+    color:
+
+        white;
+
+}
+
+/* ================================= */
+
+/* アカウントタイトル */
+
+/* ================================= */
+
+.account-title {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+    flex-wrap:
+
+        wrap;
+
+}
+
+/* ================================= */
+
+/* キャラ */
+
+/* ================================= */
+
+.character {
+
+    border:
+
+        1px solid #ddd;
+
+    padding:
+
+        15px;
+
+    margin:
+
+        12px 0;
+
+    border-radius:
+
+        8px;
+
+    background:
+
+        #fafafa;
+
+}
+
+.character h3 {
+
+    margin:
+
+        0 0 5px 0;
+
+}
+
+.character-number {
+
+    color:
+
+        #777;
+
+    font-size:
+
+        13px;
+
+}
+
+/* ================================= */
+
+/* キャラ操作ボタン */
+
+/* ================================= */
+
+.character-buttons {
+
+    margin-top:
+
+        10px;
+
+}
+
+/* ================================= */
+
+/* 削除ボタン */
+
+/* ================================= */
+
+.delete {
+
+    background:
+
+        #d32f2f;
+
+}
+
+/* ================================= */
+
+/* わくわくの実 */
+
+/* ================================= */
+
+.fruit-list {
+
+    display:
+
+        flex;
+
+    flex-wrap:
+
+        wrap;
+
+    gap:
+
+        6px;
+
+    margin-top:
+
+        8px;
+
+}
+
+.fruit-item {
+
+    display:
+
+        inline-flex;
+
+    align-items:
+
+        center;
+
+    background:
+
+        #eeeeee;
+
+    padding:
+
+        5px 8px;
+
+    border-radius:
+
+        5px;
+
+}
+
+.fruit-delete {
+
+    background:
+
+        #e53935;
+
+    padding:
+
+        2px 7px;
+
+    margin:
+
+        0 0 0 5px;
+
+    border-radius:
+
+        50%;
+
+}
+
+/* ================================= */
+
+/* 検索結果 */
+
+/* ================================= */
+
+#searchResult {
+
+    margin-top:
+
+        15px;
+
+}
+
+.search-account {
+
+    font-weight:
+
+        bold;
+
+    color:
+
+        #555;
+
+}
+
+/* ================================= */
+
+/* スマホ対応 */
+
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding:
+
+            10px;
+
+    }
+
+    input,
+
+    select {
+
+        width:
+
+            calc(100% - 20px);
+
+    }
+
+    button {
+
+        margin-top:
+
+            5px;
+
+    }
+
+    .account-title {
+
+        display:
+
+            block;
+
+    }
+
+}
+
+/* ================================= */
+/* キャラ詳細・書 */
+/* ================================= */
+.book-options { margin: 12px 0; padding: 12px; border: 1px solid #ddd; border-radius: 8px; background: #fafafa; }
+.book-options p { margin: 5px 0 10px; font-weight: bold; }
+.book-options label { display: inline-block; margin: 4px 12px 4px 0; cursor: pointer; }
+.book-options input[type="checkbox"] { width: auto; margin-right: 5px; }
+.disabled-book { color: #999; cursor: not-allowed !important; }
+.book-notice { color: #c62828; font-size: 13px; font-weight: normal !important; }
+.book-item { display: inline-block; padding: 3px 7px; margin: 2px; background: #eeeeee; border-radius: 4px; font-size: 13px; }
+
+/* ================================= */
+/* Game8 キャラ図鑑 */
+/* ================================= */
+.game8-status {
+    min-height: 1.4em;
+    color: #555;
+}
+
+.game8-help{padding:12px;border:1px solid #ddd;border-radius:8px;background:#fafafa}
+.game8-help label{display:block;margin:10px 0}
+.game8-help input[type=file]{max-width:100%}
+.game8-note{font-size:13px;color:#666;line-height:1.6}
+
+
+.book-options label{display:inline-flex;align-items:center;gap:5px;vertical-align:middle}.book-icon{width:34px;height:34px;object-fit:contain}.book-item{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;margin:3px;background:#eee;border-radius:6px}.book-item-icon{width:28px;height:28px;object-fit:contain}.fruit-item{display:inline-flex;align-items:center;gap:6px;min-height:48px;padding:4px 8px}.fruit-icon{width:42px;height:42px;object-fit:contain;border-radius:50%}.fruit-text{font-weight:500}@media(max-width:600px){.book-icon{width:30px;height:30px}.fruit-icon{width:38px;height:38px}}
+
+.fruit-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 58px;
+    padding: 6px 10px;
+    background: #eeeeee;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.fruit-icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    flex: 0 0 42px;
+}
+
+.fruit-name {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.fruit-delete {
+    flex: 0 0 auto;
+    margin-left: 4px;
+}
+
+@media(max-width:600px){
+    .fruit-item { min-height: 52px; padding: 5px 8px; }
+    .fruit-icon { width: 38px; height: 38px; flex-basis: 38px; }
+    .fruit-name { font-size: 16px; }
+}
+
+
+/* わくわくの実：キャラ詳細画面はコンパクト表示 */
+.fruit-list{display:flex;flex-wrap:wrap;gap:6px;align-items:stretch;}
+.fruit-item{box-sizing:border-box;display:flex;align-items:center;gap:6px;min-width:280px;min-height:48px;padding:5px 8px;background:#eee;border-radius:7px;}
+.fruit-icon{width:32px;height:32px;min-width:32px;object-fit:contain;border-radius:50%;display:block;}
+.fruit-name{font-size:15px;line-height:1.2;white-space:nowrap;flex:1;}
+.fruit-delete{width:26px;height:26px;min-width:26px;border:0;border-radius:50%;background:#ef3b3b;color:#fff;font-size:17px;line-height:26px;padding:0;cursor:pointer;}
+@media(max-width:800px){.fruit-item{min-width:240px;min-height:44px}.fruit-icon{width:29px;height:29px;min-width:29px}.fruit-name{font-size:14px}.fruit-delete{width:24px;height:24px;min-width:24px;font-size:16px;line-height:24px}}
+
+
+/* ================================= */
+/* キャラ編集モーダル */
+/* ================================= */
+.edit-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+}
+.edit-modal.open { display: block; }
+.edit-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+}
+.edit-modal-content {
+    position: relative;
+    width: min(560px, calc(100% - 30px));
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    margin: 20px auto;
+    padding: 22px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.25);
+}
+.edit-modal-content h2 { margin-top: 0; }
+.edit-field-label {
+    display: block;
+    margin: 12px 5px 3px;
+    font-weight: bold;
+}
+.edit-modal-content #editCharacterName,
+.edit-modal-content #editCharacterEvolution {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+.edit-book-options {
+    margin-top: 14px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+.edit-book-options > p:first-child {
+    margin: 4px 0 10px;
+    font-weight: bold;
+}
+.edit-book-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px 12px 5px 0;
+    cursor: pointer;
+}
+.edit-book-options label.disabled-book {
+    opacity: .45;
+    cursor: not-allowed;
+}
+.edit-book-options input[type="checkbox"] { margin: 0; }
+.edit-book-options img.edit-book-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.edit-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 16px;
+}
+.edit-modal-buttons button { margin: 0; }
+
+/* ================================= */
+/* わくわくの実 一括設定 */
+/* ================================= */
+.bulk-fruit-area {
+    margin-top: 18px;
+    padding: 16px;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    background: #fafafa;
+}
+.bulk-fruit-area h3 {
+    margin: 0 0 8px;
+}
+.bulk-fruit-notice {
+    margin: 0 0 12px;
+    color: #555;
+    font-size: 14px;
+}
+.bulk-fruit-row {
+    display: grid;
+    grid-template-columns: 70px minmax(240px, 1fr) 100px;
+    gap: 8px;
+    align-items: center;
+    margin: 8px 0;
+}
+.bulk-fruit-number {
+    font-weight: bold;
+    white-space: nowrap;
+}
+.bulk-fruit-name,
+.bulk-fruit-rank {
+    width: 100%;
+    box-sizing: border-box;
+}
+#bulkFruitBtn {
+    margin-top: 10px;
+}
+@media(max-width:700px){
+    .bulk-fruit-row {
+        grid-template-columns: 60px 1fr 80px;
+    }
+}
+
+/* ================================= */
+/* わくわくの実 タブ式一括選択 */
+/* ================================= */
+.bulk-fruit-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 12px 0;
+}
+.bulk-fruit-tab {
+    margin: 0;
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #eee;
+    color: #222;
+}
+.bulk-fruit-tab.active {
+    background: #333;
+    color: #fff;
+}
+.bulk-fruit-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 8px;
+}
+.bulk-fruit-option {
+    display: grid;
+    grid-template-columns: 22px 1fr 70px;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    background: #fff;
+    cursor: pointer;
+}
+.bulk-fruit-option:hover {
+    background: #f5f5f5;
+}
+.bulk-fruit-option-name {
+    line-height: 1.35;
+}
+.bulk-fruit-rank {
+    width: 100%;
+    box-sizing: border-box;
+}
+.bulk-fruit-selected-wrap {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #ddd;
+}
+.bulk-fruit-selected-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.bulk-fruit-selected {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.bulk-fruit-selected-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 9px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+}
+.bulk-fruit-empty {
+    padding: 16px;
+    color: #666;
+    text-align: center;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+}
+@media(max-width:700px){
+    .bulk-fruit-list { grid-template-columns: 1fr; }
+    .bulk-fruit-option { grid-template-columns: 22px 1fr 65px; }
+}
+
+/* ================================= */
+/* キャラ詳細画面 コンパクト表示 */
+/* ================================= */
+.account-title-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.character {
+    padding: 10px 12px;
+    margin: 8px 0;
+    border-radius: 7px;
+}
+
+.character h3 {
+    font-size: 17px;
+    margin: 0 0 3px 0;
+}
+
+.character p {
+    margin: 4px 0;
+    font-size: 13px;
+}
+
+.fruit-list {
+    gap: 4px;
+    margin-top: 5px;
+}
+
+.fruit-item {
+    min-width: 220px;
+    min-height: 36px;
+    padding: 3px 6px;
+    gap: 5px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.fruit-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+}
+
+.fruit-name {
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+.fruit-delete {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0;
+}
+
+.book-item {
+    padding: 2px 5px;
+    margin: 2px;
+    gap: 3px;
+    font-size: 12px;
+}
+
+.book-item-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.character-buttons {
+    margin-top: 7px;
+}
+
+.character-buttons button {
+    padding: 6px 9px;
+    font-size: 13px;
+}
+
+@media(max-width:800px){
+    .fruit-item {
+        min-width: 200px;
+    }
+}
+
+/* PC・スマホ データ共有 */
+.data-share-section {
+    border: 1px solid #d8dee9;
+    background: #f8faff;
+}
+.data-share-note {
+    font-size: 13px;
+    color: #586174;
+    line-height: 1.6;
+}
+.data-share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.data-share-buttons button {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+    h1 { font-size: 22px; margin: 8px 0 12px; }
+    h2 { font-size: 17px; }
+    section { padding: 10px; margin-bottom: 10px; }
+    input, select, button { min-height: 40px; box-sizing: border-box; }
+    input[type="text"], select { width: 100%; max-width: none; }
+    button { padding: 8px 10px; }
+    .account-tabs, #accountTabs { gap: 5px; }
+    #accountTabs button { min-width: 0; flex: 1 1 auto; }
+    .account-title { gap: 8px; align-items: flex-start; }
+    .account-title h2 { font-size: 17px; }
+    .account-title-buttons { gap: 5px; flex-wrap: wrap; }
+    .account-title-buttons button { font-size: 12px; padding: 7px 8px; }
+    .character { padding: 8px 9px; margin: 6px 0; }
+    .character h3 { font-size: 15px; }
+    .character p { font-size: 12px; }
+    .fruit-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3px; }
+    .fruit-item { min-width: 0; width: auto; min-height: 31px; padding: 2px 4px; gap: 3px; }
+    .fruit-icon { width: 24px; height: 24px; min-width: 24px; }
+    .fruit-name { font-size: 11px; overflow-wrap: anywhere; }
+    .fruit-delete { width: 20px; height: 20px; min-width: 20px; font-size: 12px; line-height: 20px; }
+    .book-item { font-size: 11px; padding: 1px 3px; }
+    .book-item-icon { width: 18px; height: 18px; }
+    .character-buttons { gap: 4px; }
+    .character-buttons button { font-size: 11px; padding: 5px 7px; }
+    .data-share-buttons { display: grid; grid-template-columns: 1fr; }
+    .data-share-buttons button { width: 100%; }
+}
+
+
+/* Smartphone usability improvements */
+html { -webkit-text-size-adjust: 100%; }
+body { overflow-x: hidden; }
+button, input, select { touch-action: manipulation; }
+button { min-height: 42px; }
+input, select { min-height: 42px; box-sizing: border-box; }
+
+@media (max-width: 600px) {
+    body { padding: 8px; }
+    h1 { font-size: 1.45rem; margin: 8px 0 18px; }
+    h2 { font-size: 1.15rem; }
+    section { padding: 14px; margin-bottom: 12px; }
+    input, select { width: 100%; margin: 5px 0; }
+    button { width: 100%; margin: 5px 0; }
+    .data-share-buttons { display: grid; grid-template-columns: 1fr; gap: 4px; }
+    .account-tab { width: auto; min-height: 44px; }
+    .fruit-item { min-width: 0 !important; width: 100%; }
+    .character { padding: 12px; }
+}
